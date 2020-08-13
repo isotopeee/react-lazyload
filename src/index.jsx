@@ -291,11 +291,13 @@ class LazyLoad extends Component {
 
   shouldComponentUpdate() {
     console.log('shouldComponentUpdate()');
+    alert('shouldComponentUpdate()')
     return this.visible;
   }
 
   componentWillUnmount() {
     console.log('componentWillUnmount()');
+    alert('componentWillUnmount()')
     if (this.props.overflow) {
       const parent = scrollParent(this.ref);
       if (parent && typeof parent.getAttribute === 'function') {
